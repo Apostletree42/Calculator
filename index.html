@@ -16,31 +16,31 @@
 
         <main>
             <div class="display-container">
-                <div class="display">
-                    <span class="first-variable">num1</span>
-                    <span class="operation">+-/*</span>
-                    <span class="second-variable">num2</span>
+                <div class="display" id="calculator-display">
+                    <span class="first-variable"></span>
+                    <span class="operation"></span>
+                    <span class="second-variable"></span>
                 </div>
             </div>
 
             <div class="keypad-container">
-                <button class="key clr">Clear</button>
-                <button class="key div">/</button>
-                <button class="key multiply">*</button>
-                <button class="key subtract">-</button>
-                <button class="key _7">7</button>
-                <button class="key _8">8</button>
-                <button class="key _9">9</button>
-                <button class="key add">+</button>
-                <button class="key _4">4</button>
-                <button class="key _5">5</button>
-                <button class="key _6">6</button>
-                <button class="key _1">1</button>
-                <button class="key _2">2</button>
-                <button class="key _3">3</button>
-                <button class="key enter">Enter</button>
-                <button class="key _0">0</button>
-                <button class="key del">Delete</button>
+                <button class="key clr" onclick="clearDisplay()">Clear</button>
+                <button class="key div" onclick="appendOperation('/')">/</button>
+                <button class="key multiply" onclick="appendOperation('*')">*</button>
+                <button class="key subtract" onclick="appendOperation('-')">-</button>
+                <button class="key _7" onclick="appendDigit('7')">7</button>
+                <button class="key _8" onclick="appendDigit('8')">8</button>
+                <button class="key _9" onclick="appendDigit('9')">9</button>
+                <button class="key add" onclick="appendOperation('+')">+</button>
+                <button class="key _4" onclick="appendDigit('4')">4</button>
+                <button class="key _5" onclick="appendDigit('5')">5</button>
+                <button class="key _6" onclick="appendDigit('6')">6</button>
+                <button class="key _1" onclick="appendDigit('1')">1</button>
+                <button class="key _2" onclick="appendDigit('2')">2</button>
+                <button class="key _3" onclick="appendDigit('3')">3</button>
+                <button class="key enter" onclick="calculate()">Enter</button>
+                <button class="key _0" onclick="appendDigit('0')">0</button>
+                <button class="key del" onclick="deleteLast()">Delete</button>
             </div>
         </main>
 
@@ -48,5 +48,7 @@
             <p>&copy; 2023 Your Calculator App</p>
         </footer>
     </div>
+
+    <script src="calculator.js"></script>
 </body>
 </html>
